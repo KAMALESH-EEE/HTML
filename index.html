@@ -1,38 +1,68 @@
 <!DOCTYPE html>
-<center>
-    <h1>🌽MARS INDUSTRY🌽</h1>
-    <h5>Lets Grow Together</h5>
-    <hr>
-</center>
-    <ul>
-        <li>
-            Implementation of modern technologies in agriculture with good manner.
-       </li>
-       <li>
-        To build a good technology eco-system in in the field of agriculture.
-        </li>
-       </ul><hr>
-<ol>
-    <li>
-        <a href="project.html">Products</a>
-    </li>
-    <li>
-        <a href="project.html">Projects</a>
-    </li>
-</ol>
-    <hr>
-<ul>
-    <li>
-        <a href="">Owner Info</a>
-    </li>
-    <li>
-        Contact
-        <br>
-        📧:
-        <a href="https://kamaleshravi66@gmail.com">kamaleshravi66@gmail.com</a>
-        <br>
-        📱:9345267780
-    </li>
-</ul>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+
+  body{
+    font-family: Arial, sans-serif;
+    background-color: #1bff0691;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+  }
+  .login-box
+  {
+    background-color: rgb(95, 173, 251);
+    padding: 30px;
     
- 
+    border-radius: 20px;
+    
+    box-shadow: 0px 0px 5px rgba(0, 0, 0);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <center>
+    <h1 style="color: rgb(255, 0, 0);">🌽MARS INDUSTRY🌽</h1>
+<div class="login-box">
+  <b><u><h2 style="color: rgb(0, 0, 155);">Login</h2></u></b>
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Username" required><br><br>
+    <input type="password" id="password" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="message"></p>
+</div>
+</center>
+<script>
+  const form = document.getElementById("login-form");
+  const usernameInput = document.getElementById("username");
+  const passwordInput = document.getElementById("password");
+  const message = document.getElementById("message");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (usernameInput.value === "" || passwordInput.value === "") {
+      message.textContent = "Please enter both username and password.";
+      return;
+    }
+
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+    if ((username === "20BEE4025" && password === "MARS123")||(username === "20BEE4025" && password === "MKCE")) {
+      window.location.href = "web.html";
+    } else { 
+      alert("Your username or password is wrong")
+      message.textContent = "Invalid username or password.";      
+    }
+  });
+</script>
+</body>
+
+</html>
